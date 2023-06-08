@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: false}));
 const port = process.env.PORT || 8000;
 
 //routers level middleware
-readdirSync("./routes").map(r => app.use("/api/v1", require(`./routesroutes/${r}`)));
+readdirSync("./routes").map(r => app.use("/api/v1", require(`./routes/${r}`)));
 
 //Connect to DB and start server
 mongoose
